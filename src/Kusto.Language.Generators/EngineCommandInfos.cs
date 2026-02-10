@@ -3021,6 +3021,11 @@ namespace Kusto.Language.Generators
                 $"execute cluster script [{PropertyList("ContinueOnErrors|ThrowOnErrors")}] '<|' <input_script>",
                 UnknownResult);
 
+        public static readonly CommandInfo CreateRequestMemoryProfile =
+            new CommandInfo(nameof(CreateRequestMemoryProfile),
+                $"create request_memoryprofile [{PropertyList()}]",
+                UnknownResult);
+
         public static readonly CommandInfo CreateRequestSupport =
             new CommandInfo(nameof(CreateRequestSupport),
                 $"create request_support [{PropertyList()}]",

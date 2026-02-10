@@ -1602,6 +1602,9 @@ namespace Kusto.Language
         public static readonly CommandSymbol ExecuteClusterScript =
             new CommandSymbol("ExecuteClusterScript", _schema19);
 
+        public static readonly CommandSymbol CreateRequestMemoryProfile =
+            new CommandSymbol("CreateRequestMemoryProfile", _schema19);
+
         public static readonly CommandSymbol CreateRequestSupport =
             new CommandSymbol("CreateRequestSupport", _schema19);
 
@@ -2463,6 +2466,7 @@ namespace Kusto.Language
             ShowWhatsGoingOn,
             ExecuteDatabaseScript,
             ExecuteClusterScript,
+            CreateRequestMemoryProfile,
             CreateRequestSupport,
             ShowRequestSupport,
             ShowClusterAdminState,

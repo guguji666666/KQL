@@ -6341,6 +6341,14 @@ namespace Kusto.Language.Parsing
                     rules.ScriptInput,
                     new [] {CD(), CD(), CD(), CD(isOptional: true), CD(), CD(CompletionHint.NonScalar)}));
 
+            var CreateRequestMemoryProfile = Command("CreateRequestMemoryProfile", 
+                Custom(
+                    Token("create", CompletionKind.CommandPrefix),
+                    Token("request_memoryprofile"),
+                    Optional(
+                        fragment0),
+                    shape25));
+
             var CreateRequestSupport = Command("CreateRequestSupport", 
                 Custom(
                     Token("create", CompletionKind.CommandPrefix),
@@ -8297,6 +8305,7 @@ namespace Kusto.Language.Parsing
                 new CommandParserInfo("ShowWhatsGoingOn", ShowWhatsGoingOn),
                 new CommandParserInfo("ExecuteDatabaseScript", ExecuteDatabaseScript),
                 new CommandParserInfo("ExecuteClusterScript", ExecuteClusterScript),
+                new CommandParserInfo("CreateRequestMemoryProfile", CreateRequestMemoryProfile),
                 new CommandParserInfo("CreateRequestSupport", CreateRequestSupport),
                 new CommandParserInfo("ShowRequestSupport", ShowRequestSupport),
                 new CommandParserInfo("ShowClusterAdminState", ShowClusterAdminState),
